@@ -16,6 +16,8 @@ declare module SDK {
 		showNotification(text: string)
 
 		showErrorNotification(text: string)
+
+		helpers: Helpers
 	}
 
 	type EventType =
@@ -341,6 +343,16 @@ declare module SDK {
 	}
 
 	////////////////////////////////////////////////////////////////////////
+	// Legacy Helper interface that is still used in a few examples
+	////////////////////////////////////////////////////////////////////////
+
+	interface Helpers {
+		initScrollableContainerWithDraggableImages(container: Element, options: {
+			draggableImageSelector: string
+		}): HTMLElement
+	}
+
+	////////////////////////////////////////////////////////////////////////
 	// Helpers data
 	////////////////////////////////////////////////////////////////////////
 
@@ -457,4 +469,3 @@ declare module SDK {
 	type LineWidthStyle = number
 	type LineStyleStyle = number
 }
-
